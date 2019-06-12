@@ -59,7 +59,7 @@ public class SimDriver {
     }
 
     public void uploadStartingFile(String testFileName) {
-        final String DELIMITER = ",";
+        final String DELIMITER = "";
 
         try {
             Scanner takeCommand = new Scanner(new File(testFileName));
@@ -67,8 +67,10 @@ public class SimDriver {
             int i, j, k;
 
             // read in the lawn information
+            
             tokens = takeCommand.nextLine().split(DELIMITER);
             lawnWidth = Integer.parseInt(tokens[0]);
+            
             tokens = takeCommand.nextLine().split(DELIMITER);
             lawnHeight = Integer.parseInt(tokens[0]);
 
